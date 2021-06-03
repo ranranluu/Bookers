@@ -8,5 +8,12 @@ Rails.application.routes.draw do
   get 'books' => 'books#index'
   
   resource :books
+  
+  def create
+  end
+  
+  def new
+    @books = Books.new
+  end
 
 end
