@@ -6,14 +6,11 @@ Rails.application.routes.draw do
   root 'books#top'
 
   get 'books' => 'books#index'
-  
+
   resource :books
-  
-  def create
-  end
-  
-  def new
-    @books = Books.new
-  end
+
+  post 'books' => 'books#create'
+
+  delete 'books/:id' => 'books#destroy'
 
 end
