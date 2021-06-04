@@ -1,4 +1,12 @@
 <h2>New books</h2>
 <%= form_with model:@books,local:true do |f| %>
 
-  <
+  <lavel for=books_title>Title</lavel>
+  <%= f.text_field :title %>
+  
+  <lavel for=books_body>Body</lavel>
+  <%= f.text_area :body %>
+  
+  <%= f.submit 'Create Book' %>
+  
+<% end %>
