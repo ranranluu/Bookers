@@ -9,10 +9,12 @@ Rails.application.routes.draw do
 
   get 'books/:id' => 'books#show'
 
-  resource :books
+  
 
   post 'books' => 'books#create'
 
-  delete 'books/:id' => 'books#destroy'
+  get 'books/:id/edit' => 'books#edit'
+
+  delete 'books' => 'books#destroy'
 
 end
