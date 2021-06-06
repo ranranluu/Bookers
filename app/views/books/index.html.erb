@@ -1,4 +1,8 @@
-
+<body>
+  <% flash.each do |message_type, message| %>
+    <%= message %>
+  <% end %>
+</body>
 <h1>Books</h1>
 <table>
   <thead>
