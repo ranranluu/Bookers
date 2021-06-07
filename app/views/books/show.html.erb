@@ -1,19 +1,18 @@
-
-
 <body>
   <% flash.each do |message_type, message| %>
     <%= message %>
   <% end %>
 </body>
 
-<P>
+<p>
   <strong>Title:</strong>
   <%= @book.title %>
-</P>
+</p>
 <p>
   <strong>Body:</strong>
   <%= @book.body %>
 </p>
-<%= link_to "Edit", editbook_path(@book.id) %>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
 |
 <%= link_to "Back", "/books" %>
