@@ -1,4 +1,4 @@
-<h1>Books#show</h1>
+
 
 <body>
   <% flash.each do |message_type, message| %>
@@ -6,4 +6,14 @@
   <% end %>
 </body>
 
-<p>Find me in app/views/books/show.html.erb</p>
+<P>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</P>
+<p>
+  <strong>Body:</strong>
+  <%= @book.body %>
+</p>
+<%= link_to "Edit", editbook_path(@book.id) %>
+|
+<%= link_to "Back", "/books" %>

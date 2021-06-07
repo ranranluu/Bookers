@@ -11,7 +11,10 @@ Rails.application.routes.draw do
 
   post 'books' => 'books#create'
 
-  get 'books/:id/edit' => 'books#edit'
+  get 'books/:id/edit' => 'books#edit',as: 'editbook'
+
+  patch 'books/:id' => 'books#update',as: 'updatebook'
+
 
   delete 'books/:id' => 'books#destroy', as: 'destroy_book'
 
